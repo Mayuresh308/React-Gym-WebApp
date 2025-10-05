@@ -1,0 +1,102 @@
+.workout-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: #0f0f17;
+  color: white;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header centered */
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.header p {
+  font-style: italic;
+  color: #a3a3a3;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* Scrollable workouts container */
+.workout-scroll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  overflow-y: auto;
+  padding-bottom: 100px; /* space for sticky button */
+  max-height: calc(100vh - 160px); /* keep scrollable area visible */
+}
+
+/* Workout card layout */
+.workout-card {
+  width: 90%;
+  max-width: 400px;
+  background: #161626;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Sticky Add Button */
+/* Sticky Add Button (Centered with Purple Circle) */
+.add-btn {
+  position: fixed;
+  bottom: 80px; /* stays just above the navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  z-index: 20;
+}
+
+.add-btn::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 60px;
+  height: 60px;
+  background: #7c3aed;
+  border-radius: 50%;
+  z-index: -1;
+  transition: background 0.2s ease;
+}
+
+.add-btn:hover::before {
+  background: #6d28d9;
+}
+
+.add-btn span {
+  display: block;
+  line-height: 1.2;
+}
+
+
+.add-btn:hover {
+  background: #6d28d9;
+}

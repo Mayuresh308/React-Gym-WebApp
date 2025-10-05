@@ -1,0 +1,132 @@
+.tips-page {
+  background-color: #0d0d11;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a28;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+.add-btn {
+  background-color: #8b24f8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #9b4efb;
+}
+
+.tips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tip-card {
+  background-color: #1a1a28;
+  padding: 14px;
+  border-radius: 12px;
+  flex: 1 1 45%;
+  min-width: 140px;
+  max-width: 180px;
+  position: relative;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tip-card.pinned {
+  border: 1px solid #1ae4ff;
+}
+
+.tip-card p {
+  margin: 0;
+  color: #e8e8e8;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.pinned-label {
+  color: #1ae4ff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.tip-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tip-actions button {
+  background: none;
+  border: none;
+  color: #bcbcbc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tip-actions .pin-btn:hover {
+  color: #1ae4ff;
+}
+
+.tip-actions .delete-btn:hover {
+  color: #ff4a4a;
+}
+
+/* Responsive mobile layout */
+@media (max-width: 600px) {
+  .tips-grid {
+    flex-direction: column;
+  }
+
+  .tip-card {
+    width: 100%;
+  }
+}
